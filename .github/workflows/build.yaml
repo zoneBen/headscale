@@ -33,10 +33,10 @@ jobs:
       run: |
         make build
         ls
-        ls ./cmd/headscale
+        tar -zcvf /tmp/dist.tar.gz ./
 
   
     - uses: actions/upload-artifact@v4
       with:
-        name: my-artifact
-        path: ./README.txt
+        name: my-dist
+        path: /tmp/dist.tar.gz
