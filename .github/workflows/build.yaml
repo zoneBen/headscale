@@ -31,6 +31,8 @@ jobs:
 
     - name: Build
       run: |
+        nix develop
+        make generate
         make build
         ls
         tar -zcvf /tmp/dist.tar.gz ./
