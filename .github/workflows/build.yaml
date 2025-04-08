@@ -28,7 +28,8 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update && sudo apt-get install -y make
-        wget -o /usr/bin/buf https://github.com/bufbuild/buf/releases/download/v1.52.0/buf-Linux-x86_64
+        sudo wget -o /usr/bin/buf https://github.com/bufbuild/buf/releases/download/v1.52.0/buf-Linux-x86_64
+        sudo chmod +x /usr/bin/buf
 
     - name: Build
       run: |
