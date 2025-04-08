@@ -30,6 +30,6 @@ jobs:
       run: |
         make build
 
-    - name: Test (可选)
+    - name: Test 
       run: |
         make test
