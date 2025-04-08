@@ -11,7 +11,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        repository: headscale/headscale
+        repository: juanfont/headscale
         ref: main
 
     - name: Set up Go
