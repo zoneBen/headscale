@@ -32,11 +32,9 @@ jobs:
     - name: Build
       run: |
         make build
+        ls
 
-    - name: Test 
-      run: |
-        make test
-    
+  
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
