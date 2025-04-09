@@ -41,12 +41,8 @@ jobs:
         export PATH="$PATH:$(go env GOPATH)/bin"
         nix develop
         make generate
-        make build
-        ls
-        tar -zcvf /tmp/dist.tar.gz ./
-
-  
+        nix develop --command -- go build -o "headscale" ./cmd/headscale
     - uses: actions/upload-artifact@v4
       with:
-        name: my-dist
-        path: /tmp/dist.tar.gz
+        name: headscale
+        path: ./headscale
